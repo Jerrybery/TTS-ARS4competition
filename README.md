@@ -32,6 +32,7 @@ cd /path/to/paddleSpeech && pip install -e . --use-pep517
 | `server.py`     | 提供ASR服务                                                            | `python server.py` |
 | `tts_paddle.py` | 包含`AgentSpeaker`类，用于文字转语音                                          | 略                  |
 | `recorder.py`   | 包含录音函数，使用函数时会检测静音情况下的声音强度，在静音时长超过1.5s后停止录音并存储到`audio`下             | 略                  |
+
 运行ASR服务会创建文件`detection_result.json`，其格式为：
 ```JavaScript
 {
