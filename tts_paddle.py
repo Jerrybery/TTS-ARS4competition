@@ -8,7 +8,7 @@ class AgentSpeaker():
         self.model = TTSExecutor()
 
     def __call__(self, text):
-        audio_data = self.model(text=text, output="TTS_ASR/temp.wav")
+        audio_data = self.model(text=text, output="temp.wav")
         with open("TTS_ASR/temp.wav", "rb") as f:
             audio_data = np.frombuffer(f.read(), dtype=np.int16)
         sd.play(audio_data, samplerate=24000)  # 默认采样率
