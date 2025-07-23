@@ -25,7 +25,7 @@ class WavHandler(FileSystemEventHandler):
                     audio_format="wav",
                 )
                 print("ASR processing finished")
-                result_path = "paddleASR/detection_result.json"
+                result_path = "detection_result.json"
                 # 读取已有 json
                 if os.path.exists(result_path):
                     try:
@@ -60,12 +60,12 @@ class WavHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     # 确保音频目录存在
-    os.makedirs("paddleASR/audio", exist_ok=True)
+    os.makedirs("TTS-ARS4competition/audio", exist_ok=True)
     
     # 监听音频目录
     event_handler = WavHandler()
     observer = Observer()
-    observer.schedule(event_handler, path="paddleASR/audio", recursive=False)
+    observer.schedule(event_handler, path="audio", recursive=False)
     observer.start()
     
     try:

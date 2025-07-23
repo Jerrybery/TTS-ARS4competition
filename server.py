@@ -5,4 +5,4 @@ import wave
 
 if __name__ == "__main__":
     server_ASR_executor = ServerExecutor()  
-    server_ASR_executor(config_file="paddleASR/cfg/ws_conformer_application.yaml")
+    server_ASR_executor(config_file="cfg/ws_conformer_application.yaml")

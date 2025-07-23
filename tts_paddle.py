@@ -11,9 +11,9 @@ class AgentSpeaker():
         audio_data = self.model(text=text, output="temp.wav")
         with open("TTS_ASR/temp.wav", "rb") as f:
             audio_data = np.frombuffer(f.read(), dtype=np.int16)
-        sd.play(audio_data, samplerate=24000)  # 默认采样率
+        sd.play(audio_data, samplerate=24000) # 直接播放
         sd.wait()
-        os.remove("TTS_ASR/temp.wav")  # 删除临时文件
+        os.remove("TTS_ASR/temp.wav")
 
 if __name__ == "__main__":
     speaker = AgentSpeaker()

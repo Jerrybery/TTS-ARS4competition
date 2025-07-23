@@ -15,7 +15,7 @@ def record_until_silence():
     recording = False
     last_voice_time = None
     silence_energy = []
-    output_file = f"paddleASR/audio/sound_{time.strftime('%Y-%m-%d %H:%M:%S')}.wav"
+    output_file = f"audio/sound_{time.strftime('%Y-%m-%d %H:%M:%S')}.wav"
 
     def silence_callback(indata, frames, cb_time, status):
         nonlocal silence_energy
@@ -58,7 +58,7 @@ def record_until_silence():
         while True:
             if recording and last_voice_time is not None:
                 current_time = time.time()
-                if current_time - last_voice_time > SILENCE_THRESHOLD:
+                if current_time - last_voice_time > SILENCE_THRESHOLD and last_voice_time is not None:
                     print("🔇 检测到静音，停止录音")
                     break
             time.sleep(0.1)
