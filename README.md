@@ -16,6 +16,7 @@ conda activate StreamingSpeech
 ```
 然后通过pip下载需要的包
 ```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 ```
 为保证你能够正常使用这个仓库，建议使用本地安装的方式下载`paddlespeech`此库，即：
