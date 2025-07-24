@@ -1,7 +1,7 @@
-本文档旨在快速帮助你使用这个基于`paddleSpeech`的流式tts/asr项目。
+本文档旨在快速帮助你使用这个基于`paddlespeech`的流式tts/asr项目。下面是如何配置此环境的教程：
 
 # 必要系统依赖
-1. `libportaudio2`和`mpv`
+主要是`libportaudio2`和`mpv`
 通过如命令即可安装（Ubuntu）
 ```bash
 sudo apt-get update
@@ -42,3 +42,5 @@ cd /path/to/paddleSpeech && pip install -e . --use-pep517
 	}
 }
 ```
+
+使用ASR时请先启动`server.py`和`client.py`，然后通过`recorder.py`中的函数采集音频。
