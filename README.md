@@ -14,11 +14,19 @@ sudo apt-get install libportaudio2 mpv
 conda env create -f enviornment.yml
 conda activate StreamingSpeech
 ```
+
 然后通过pip下载需要的包
 ```bash
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install -r requirements.txt
+python -m pip install paddlepaddle-gpu==3.1.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
+pip uninstall aistudio-sdk
+pip install aistudio-sdk==0.2.6
+
+# 如果你是Ubuntu 20.4及以下，只要你的系统不支持gcc12的，请运行以下命令：
+pip uninstall opencc
+pip install opencc==1.1.6
+# 换为你当前系统支持的版本即可
 ```
+
 为保证你能够正常使用这个仓库，建议使用本地安装的方式下载`paddlespeech`此库，即：
 ```bash
 git clone https://github.com/PaddlePaddle/PaddleSpeech.git /path/to/PaddleSpeech
