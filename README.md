@@ -18,6 +18,7 @@ conda activate StreamingSpeech
 
 然后通过pip下载需要的包
 ```bash
+# 请以飞桨官方提供的下载指南为准，你也可以换为2.6.2版本的，测试环境下可以使用
 python -m pip install paddlepaddle-gpu==3.1.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
 pip uninstall aistudio-sdk
 pip install aistudio-sdk==0.2.6
