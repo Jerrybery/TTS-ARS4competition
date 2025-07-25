@@ -1,6 +1,7 @@
 本文档旨在快速帮助你使用这个基于`paddlespeech`的流式tts/asr项目。下面是如何配置此环境的教程：
 
 # 必要系统依赖
+本项目只能在Linux系统上运行，测试在Ubuntu 20.04上完成。
 主要是`libportaudio2`和`mpv`
 通过如命令即可安装（Ubuntu）
 ```bash
